@@ -113,6 +113,12 @@ $(function() {
 
     // Stinky 404
     document.title = 'ExHentai Easy! ~ Login';
+
+    // Add the stylesheets here
+    var temp = '<link rel="stylesheet" href="xxxxx.css" type="text/css" />';
+    $( 'head' ).append( temp.replace( "xxxxx.css", self.options.style_files[ 0 ] ) );
+    $( 'head' ).append( temp.replace( "xxxxx.css", self.options.style_files[ 1 ] ) );
+    $( 'head' ).append( temp.replace( "xxxxx.css", self.options.style_files[ 2 ] ) );
         
     // Append main page content
     var b = $('body');

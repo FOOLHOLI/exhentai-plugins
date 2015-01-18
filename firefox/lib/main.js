@@ -18,10 +18,16 @@ exports.main = function() {
 	});
 
     	pageMod.PageMod({
-		include: "http://exhentai.org/login",
-		contentStyleFile: [self.data.url("css/bootstrap.min.css"), self.data.url("css/bootstrap-theme.min.css"), self.data.url("css/login.css")],   
+		include: "http://exhentai.org/login",		
 		contentScriptWhen: "end",
 		contentScriptFile: [self.data.url("js/jquery.js"), self.data.url("js/exhentai.js")],
+                contentScriptOptions: {
+                	style_files: [ 
+                        	data.url("css/bootstrap.min.css"),
+                                data.url("css/bootstrap-theme.min.css"),
+                                data.url("css/login.css") 
+                        ]                        
+                },
 		onAttach: function(worker) {
 	
 		// Username Save Stuff
