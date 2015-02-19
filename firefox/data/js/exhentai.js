@@ -114,6 +114,8 @@ $(function() {
     // Stinky 404
     document.title = 'ExHentai Easy! ~ Login';
 
+
+    //workaround for bug that appeared in Android Version of FF34 when using contentStyleFile
     // Add the stylesheets here
     var temp = '<link rel="stylesheet" href="xxxxx.css" type="text/css" />';
     $( 'head' ).append( temp.replace( "xxxxx.css", self.options.style_files[ 0 ] ) );

@@ -21,6 +21,8 @@ exports.main = function() {
 		include: "http://exhentai.org/login",		
 		contentScriptWhen: "end",
 		contentScriptFile: [self.data.url("js/jquery.js"), self.data.url("js/exhentai.js")],
+
+		//workaround for bug that appeared in Android Version of FF34 when using contentStyleFile
                 contentScriptOptions: {
                 	style_files: [ 
                         	data.url("css/bootstrap.min.css"),
@@ -28,6 +30,8 @@ exports.main = function() {
                                 data.url("css/login.css") 
                         ]                        
                 },
+
+
 		onAttach: function(worker) {
 	
 		// Username Save Stuff
